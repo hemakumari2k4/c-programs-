@@ -1,0 +1,28 @@
+//write a program to print the difference between oddsum and evensum
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,k,esum,osum,i,cnt,diff;
+	scanf("%d  %d",&n,&k);
+	i=1;
+	while(i<=n)
+	{
+		if(i%k==0)
+		{
+			printf("\n%d",i);
+			cnt++;
+			if(i%2==0)
+			esum=esum+i;
+			else
+			osum+=i;
+			diff=esum-osum;
+		}
+		i++;
+	}
+	printf("\ncount=%d",cnt);
+	printf("\nevensum = %d",esum);
+	printf("\nosum = %d",osum);
+	printf("\nDifference in even sum and odd sum = %d",diff);
+getch();	
+}
